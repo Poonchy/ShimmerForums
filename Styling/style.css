@@ -1,0 +1,126 @@
+@font-face {
+    font-family: SteamPunk;
+    src: url(../res/Steelworks\ Vintage\ Demo.ttf);
+}
+
+* {
+    font-family: 'SteamPunk', cursive !important;
+}
+
+html, body {
+    background: linear-gradient(rgb(0, 0, 0), rgb(168, 168, 168));
+    color: white !important;
+}
+
+.center-form {
+    width: 50%;
+    margin-left: 25%;
+    top: 50%;
+    text-align: center;
+}
+
+#navbar {
+    background: linear-gradient(black, red);
+    width: 80%;
+    left: 10%;
+    top: 0;
+    position: relative;
+}
+
+#navbar * {
+    display: inline-block;
+    font-size: 30px;
+    color: white;
+    margin:0;
+}
+
+input {
+    font-family: 'Pacifico', cursive;
+}
+
+#navbar a {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.container .row input {
+    display: block;
+    left: 20%;
+    align-self: center;
+    align-items: center;
+}
+
+nav {
+    background-color: white;
+    color: black;
+}
+
+.button {
+    background-color: rgb(255, 0, 0);  
+    border-radius: 5px;
+    color: white;
+    padding: .5em;
+    text-decoration: none;
+  }
+  
+.button:focus,
+.button:hover {
+    background-color: rgb(202, 0, 0);
+    color: White;
+  }
+
+footer {
+    bottom: 2 !important;
+    position: relative;
+    color: black;
+    height: 100px;
+}
+
+.forumtypelabels {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+}
+
+.singleForum {
+    width: 100%;
+    border: 5px solid white;
+    margin: 10px;
+    transition: all .5s ease-in-out;
+}
+
+.singleForum:hover {
+    border-color: red;
+    background-color: black;
+    cursor: pointer;
+}
+
+.singleForum h2:nth-of-type(1) {
+    margin-left: 20px;
+}
+
+.singleForum h2:nth-of-type(2) {
+    margin-right: 20px;
+}
+
+.deletebtn {
+    position: relative;
+    display: inline-block;
+    margin: 20px !important;
+    margin-top: 50px;
+    z-index: 9999;
+}
+
+.container-custom {
+    margin: 0px 20px !important;
+}
+
+.commentborder{
+    border: 5px solid white;
+}

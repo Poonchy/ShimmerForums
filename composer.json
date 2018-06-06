@@ -1,0 +1,8 @@
+{
+    "name": "Shimmer Studios Forums",
+    "description": "A basic forum template",
+    "require": {
+        "php": "^7.0",
+        "phpmailer/phpmailer": "~6.0"
+    }
+}
