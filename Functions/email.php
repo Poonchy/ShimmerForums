@@ -5,6 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     die;
 }
 $toEmail = mysqli_real_escape_string($conn, $_POST['email']);
+$emailPass = getenv("sendgridPass");
 require '../vendor/autoload.php';
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->IsSMTP();
@@ -14,7 +15,7 @@ $mail->Host = 'smtp.sendgrid.net';
 $mail->Port = 465;
 $mail->SMTPSecure = 'ssl';
 $mail->Username = "apikey";
-$mail->Password = "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";
+$mail->Password = "$emailPass";
 
 $mail->From = "samplegameforum@gmail.com";
 $mail->FromName = "SGF Password Support";
