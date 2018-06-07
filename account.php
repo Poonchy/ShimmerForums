@@ -3,7 +3,13 @@
 include 'Segments/header.php';
 
 if(!isset($_SESSION['username'])) { 
-    if (isset($_SESSION['error'])){
+    if (isset($_SESSION['error'])){ ?>
+        <style>
+            h1 {
+                text-align: center;
+            }
+        </style>
+        <?php
         if ($_SESSION['error'] == "noaccount") {?>
             <h1>That account doesn't exist.</h1>
         <?php } else if ($_SESSION['error'] == "wrongpass") { ?>
@@ -30,6 +36,12 @@ if(!isset($_SESSION['username'])) {
                 </div>
             </div>
         </form>
+        <div class = "container">
+            <div class = "row justify-content-center">
+                <a style = "text-align: center;" href = "forgot.php">Forgot password</a>
+            </div>
+        </div>
+        <br>
     </div>
     <div class = "center-form">
         <form method="post" action="Functions/signup.php">

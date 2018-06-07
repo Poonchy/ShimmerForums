@@ -63,10 +63,11 @@ while ($comment = $commentQuery -> fetch_assoc()){ ?>
 if (isset($_SESSION['alias'])) { ?>
     <div class = "container">
         <div class = "row">
-            <?php if ($_GET['forumtype'] == "announcements") { ?>
-                <form method="post" action="Functions/addannouncementcomment.php">
-            <?php } else if ($_GET['forumtype'] == "general") { ?>
-                <form method="post" action="Functions/addgeneralcomment.php">
+            <form method="post" action="Functions/addcomment.php">
+            <?php if ($_GET['forumtype'] == "general") { ?>
+                <input type = "hidden" value = "generalcomment" name = "whereto" >
+            <?php } else if ($_GET['forumtype'] == "announcements") { ?>
+                <input type = "hidden" value = "announcementcomment" name = "whereto" >
             <?php } ?>
                 <input type = "hidden" value = "<?php echo $postID; ?>" name = "id">
                 <input type = "hidden" value = "<?php echo $_SESSION['alias']; ?>" name = "userscomment">
